@@ -1,0 +1,34 @@
+{
+	"private": true,
+	"name": "vscode-typescript-docue-plugin",
+	"version": "0.0.2",
+	"icon": "images/icon.png",
+	"displayName": "TypeScript Docue Plugin (Doclar)",
+	"description": "Docue Plugin for TypeScript server",
+	"author": "johnsoncodehk",
+	"publisher": "Docue",
+	"engines": {
+		"vscode": "*"
+	},
+	"contributes": {
+		"typescriptServerPlugins": [
+			{
+				"name": "typescript-docue-plugin-bundle",
+				"enableForWorkspaceTypeScriptVersions": true
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"prebuild": "cd ../.. && npm run build",
+		"build": "node scripts/build",
+		"watch": "node scripts/build --watch",
+		"pack": "vsce package",
+		"release": "vsce publish",
+		"release:next": "vsce publish --pre-release"
+	},
+	"devDependencies": {
+		"esbuild": "latest",
+		"vsce": "latest"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"name": "docue-tsc",
+	"version": "0.0.2",
+	"main": "out/index.js",
+	"files": [
+		"bin",
+		"out/**/*.js",
+		"out/**/*.d.ts"
+	],
+	"bin": {
+		"docue-tsc": "./bin/docue-tsc.js"
+	},
+	"dependencies": {
+		"semver": "^7.5.4"
+	},
+	"peerDependencies": {
+		"typescript": "*"
+	},
+	"devDependencies": {
+		"@types/node": "latest"
+	}
+}

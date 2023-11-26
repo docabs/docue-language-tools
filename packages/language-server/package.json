@@ -1,0 +1,15 @@
+{
+	"name": "@docue/language-server",
+	"version": "0.0.2",
+	"main": "out/index.js",
+	"files": [
+		"out/**/*.js",
+		"out/**/*.d.ts"
+	],
+	"bin": {
+		"docue-language-server": "./bin/docue-language-server.js"
+	},
+	"dependencies": {
+		"vscode-languageserver-protocol": "^3.17.5"
+	}
+}

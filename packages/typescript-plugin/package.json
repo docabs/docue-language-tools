@@ -1,0 +1,12 @@
+{
+	"name": "typescript-docue-plugin",
+	"version": "0.0.2",
+	"main": "out/index.js",
+	"files": [
+		"out/**/*.js",
+		"out/**/*.d.ts"
+	],
+	"dependencies": {
+		"@volar/typescript": "~1.11.0"
+	}
+}

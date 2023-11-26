@@ -1,0 +1,25 @@
+{
+	"name": "docue-component-meta",
+	"version": "0.0.2",
+	"main": "out/index.js",
+	"files": [
+		"out/**/*.js",
+		"out/**/*.d.ts"
+	],
+	"dependencies": {
+		"path-browserify": "^1.0.1",
+		"docue-component-type-helpers": "0.0.2"
+	},
+	"peerDependencies": {
+		"typescript": "*"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/path-browserify": "latest"
+	}
+}

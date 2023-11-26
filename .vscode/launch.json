@@ -1,0 +1,78 @@
+// A launch configuration that compiles the extension and then opens it inside a new window
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch Client",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				// "--disable-extensions",
+				"--extensionDevelopmentPath=${workspaceRoot}/extensions/vscode"
+			],
+			"outFiles": [
+				"${workspaceRoot}/*/*/out/**/*.js"
+			],
+			"preLaunchTask": {
+				"type": "npm",
+				"script": "watch"
+			}
+		},
+		{
+			"type": "extensionHost",
+			"request": "launch",
+			"name": "Launch TypeScript Plugin",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--disable-extensions",
+				"--extensionDevelopmentPath=${workspaceRoot}/extensions/vscode-typescript-plugin"
+			],
+			"outFiles": [
+				"${workspaceRoot}/*/*/out/**/*.js"
+			],
+			"preLaunchTask": {
+				"type": "npm",
+				"script": "watch"
+			}
+		},
+		{
+			"name": "Launch Web Client",
+			"type": "pwa-extensionHost",
+			"debugWebWorkerHost": true,
+			"request": "launch",
+			"args": [
+				"--disable-extensions",
+				"--extensionDevelopmentPath=${workspaceFolder}/extensions/vscode",
+				"--extensionDevelopmentKind=web"
+			],
+			"outFiles": [
+				"${workspaceRoot}/*/*/out/**/*.js"
+			],
+			"preLaunchTask": {
+				"type": "npm",
+				"script": "watch"
+			}
+		},
+		{
+			"name": "Attach to Language Features Server",
+			"type": "node",
+			"request": "attach",
+			"port": 6009,
+			"restart": true,
+			"outFiles": [
+				"${workspaceRoot}/*/*/out/**/*.js"
+			]
+		},
+		{
+			"name": "Attach to Document Features Server",
+			"type": "node",
+			"request": "attach",
+			"port": 6011,
+			"restart": true,
+			"outFiles": [
+				"${workspaceRoot}/*/*/out/**/*.js"
+			]
+		}
+	],
+}
